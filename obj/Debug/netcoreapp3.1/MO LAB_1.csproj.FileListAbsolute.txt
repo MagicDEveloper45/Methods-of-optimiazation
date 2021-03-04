@@ -1,0 +1,26 @@
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.csprojAssemblyReference.cache
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.AssemblyInfoInputs.cache
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.AssemblyInfo.cs
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.csproj.CoreCompileInputs.cache
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.exe
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.deps.json
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.runtimeconfig.json
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.runtimeconfig.dev.json
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.dll
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.pdb
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.dll
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.pdb
+C:\Users\Игорь Лукин\source\repos\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.genruntimeconfig.cache
+C:\Users\LIV06\Desktop\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.exe
+C:\Users\LIV06\Desktop\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.deps.json
+C:\Users\LIV06\Desktop\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.runtimeconfig.json
+C:\Users\LIV06\Desktop\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.runtimeconfig.dev.json
+C:\Users\LIV06\Desktop\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.dll
+C:\Users\LIV06\Desktop\MO LAB_1\bin\Debug\netcoreapp3.1\MO LAB_1.pdb
+C:\Users\LIV06\Desktop\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.csprojAssemblyReference.cache
+C:\Users\LIV06\Desktop\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.AssemblyInfoInputs.cache
+C:\Users\LIV06\Desktop\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.AssemblyInfo.cs
+C:\Users\LIV06\Desktop\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.csproj.CoreCompileInputs.cache
+C:\Users\LIV06\Desktop\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.dll
+C:\Users\LIV06\Desktop\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.pdb
+C:\Users\LIV06\Desktop\MO LAB_1\obj\Debug\netcoreapp3.1\MO LAB_1.genruntimeconfig.cache
