@@ -15,7 +15,7 @@ namespace MO_LAB_1
             Console.Write(" \n input:  ");
             int choose = Convert.ToInt32(Console.ReadLine());
 
-            double a, b, e;
+            double a, b, e, beta;
           
             switch (choose)
             {
@@ -29,14 +29,17 @@ namespace MO_LAB_1
                     b = Convert.ToDouble(Console.ReadLine());
                     
                     Console.Write("         Enter e: ");
-                    e = double.Parse(Console.ReadLine());                   
+                    e = double.Parse(Console.ReadLine());
 
-                    HalfDivisionMethod problem_1 = new HalfDivisionMethod(a, b ,e);
+                    Console.Write("         Enter beta: ");
+                    beta = double.Parse(Console.ReadLine());
+
+                    HalfDivisionMethod problem_1 = new HalfDivisionMethod(a, b, beta, e);
                     problem_1.method();                  
                     
                     Console.WriteLine(" \n"  +
-                        $"         Center = {problem_1.center}" + " \n " + 
-                        $"        Counter of iterations = {problem_1.counter}"
+                        $"         J* = {problem_1.jRes}" + " \n " + 
+                        $"        Counter of iterations = {problem_1.n}"
                         );
                     break;
 
@@ -56,32 +59,49 @@ namespace MO_LAB_1
                     problem_2.method();
 
                     Console.WriteLine(" \n" +
-                        $"         xmin = {problem_2.xmin}" + " \n " +
-                        $"        Func (xmin) = {problem_2.resultF}" + " \n " +
-                        $"        Counter of iterations = {problem_2.counter}"
+                        $"         J* = {problem_2.jRes}" + " \n " +
+                        $"        Counter of iterations = {problem_2.n}"
                         );
                     break;
-                case 3:
-                    Console.WriteLine("         The parabola Method  ");
 
-                    Console.Write("         Enter a: ");
-                    a = Convert.ToDouble(Console.ReadLine());
+                //case 3:
+                //    Console.WriteLine("         The parabola Method  ");
 
-                    Console.Write("         Enter b: ");
-                    b = Convert.ToDouble(Console.ReadLine());
+                //    Console.Write("         Enter a: ");
+                //    a = Convert.ToDouble(Console.ReadLine());
+
+                //    Console.Write("         Enter b: ");
+                //    b = Convert.ToDouble(Console.ReadLine());
+
+                //    Console.Write("         Enter e: ");
+                //    e = double.Parse(Console.ReadLine());
+
+                //    ParabolaMethod problem_3 = new ParabolaMethod(a, b, e);
+                //    problem_3.method();
+
+                //    Console.WriteLine(" \n" +
+                //        $"         J* = {problem_3.jRes}" + " \n " +
+                //        $"        Counter of iterations = {problem_3.n}"
+                //        );
+                //    break;
+
+                case 4:
+                    Console.WriteLine("         The Newton's method  ");
+
+                    Console.Write("         Enter u0: ");
+                    double u0 = Convert.ToDouble(Console.ReadLine());                  
 
                     Console.Write("         Enter e: ");
                     e = double.Parse(Console.ReadLine());
 
-                    ParabolaMethod problem_3 = new ParabolaMethod(a, b, e);
-                    problem_3.method();
+                    NewtonMethod problem_4 = new NewtonMethod(u0, e);
+                    problem_4.method();
 
                     Console.WriteLine(" \n" +
-                        $"         Integral = {problem_3.integral}" + " \n " +                        
-                        $"        Counter of iterations = {problem_3.counter}"
+                        $"         J* = {problem_4.jRes}" + " \n " +
+                        $"        Counter of iterations = {problem_4.k}"
                         );
                     break;
-
 
                 default:
                    

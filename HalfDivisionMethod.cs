@@ -6,17 +6,26 @@ namespace MO_LAB_1
 {
     class HalfDivisionMethod
     {
-        public double center;
-        public int counter;
-        private double leftBorder;
-        private double rightBorder;
+        private double u1, u2, j1, j2, uRes;
+        public double jRes;
+        public int n;
+        private double a;
+        private double b;
         private double eps;
+        private double beta;
 
-        public HalfDivisionMethod(double a, double b, double e)
+        public HalfDivisionMethod(double a, double b, double beta, double eps)
         {
-            leftBorder = a;
-            rightBorder = b;
-            eps = e;
+            this.a = a;
+            this.b = b;
+            this.beta = beta;
+            this.eps = eps;           
+
+            while (this.beta > 1)
+            {
+                this.beta /= 2;
+            }              
+                 
         }
 
         double func(double x )
@@ -26,19 +35,43 @@ namespace MO_LAB_1
 
         public void method()
         {
-            counter = 1;
-            center = (leftBorder + rightBorder) / 2;
-
-            while (Math.Abs(rightBorder - leftBorder) > eps && (func(center) != 0))
+            if (a > b || a == b)
             {
-                if (func(leftBorder) * func(center) < 0)
-                    rightBorder = center;
-                else
-                    leftBorder = center;
-                center = (leftBorder + rightBorder) / 2;
-                counter++;
+                Console.WriteLine("\nError1. Input borders are incorrect");
+                return;
             }
-           
+
+            if (beta <= 0)
+            {
+                Console.WriteLine("\nError1. Input beta is incorrect");
+                return;
+            }
+
+            if (eps < 0)
+            {
+                Console.WriteLine("\nError1. Input eps is incorrect");
+                return;
+            }
+
+            n = 0;
+            do 
+            {
+                n++;
+                u1 = (b + a - beta) / 2;
+                u2 = (b + a + beta) / 2;
+
+                j1 = func(u1);
+                j2 = func(u2);
+
+                if (j1 < j2) b = u2;
+                if (j1 > j2) a = u1;
+                if (j1 == j2) b = u2;
+
+            } while (Math.Abs(b - a) >= eps);
+
+            uRes = (b + a) / 2;
+            jRes = func(uRes);
+
         }
     }
 }

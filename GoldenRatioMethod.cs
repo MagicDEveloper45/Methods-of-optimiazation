@@ -5,21 +5,22 @@ using System.Text;
 namespace MO_LAB_1
 {
     class GoldenRatioMethod
-    {
-        public int counter;
-        public double leftBorder;
-        public double rightBorder;
-        public double eps;        
-        public double xmin;
-        public double resultF;
+    {        
+        private double u1, u2, j1, j2, uRes;
+        public double jRes;
+        public int n;
+        private double a;
+        private double b;
+        private double eps;      
+       
+        private readonly double alpha = (Math.Sqrt(5) - 1) / 2; // 0.6180339887498949
+        private readonly double alpha1 = (3 - Math.Sqrt(5)) / 2; // 0.3819660112501051
 
-        private readonly double t = (Math.Sqrt(5) - 1) / 2; // 0,61803399    
-
-        public GoldenRatioMethod(double a, double b, double e)
+        public GoldenRatioMethod(double a, double b, double eps)
         {
-            leftBorder = a;
-            rightBorder = b;
-            eps = e;           
+            this.a = a;
+            this.b = b;
+            this.eps = eps;        
         }
 
         double func(double x)
@@ -27,26 +28,64 @@ namespace MO_LAB_1
             return (3 * Math.Cos(2 * x + 4));
             // return Math.Pow(x, 3) + 8 * Math.Pow(x, 2) - 3 * x + 3;
         }
-      
+
         public void method()
         {
-            double x1 = rightBorder - t * (rightBorder - leftBorder);
-            double x2 = leftBorder + t * (rightBorder - leftBorder);
-
-            counter = 1;
-            while (eps <= Math.Abs(rightBorder - leftBorder))
-            {                
-                if (func(x2) < func(x1))
-                    leftBorder = x1;
-                else
-                    rightBorder = x2;
-                x1 = rightBorder - t * (rightBorder - leftBorder);
-                x2 = leftBorder + t * (rightBorder - leftBorder);
-
-                counter++;
+            if (a > b || a == b)
+            {
+                Console.WriteLine("\n Error1. Input borders are incorrect");
+                return;
             }
-            xmin = (leftBorder + rightBorder) * 0.5;
-            resultF = func(xmin);
+
+            if (eps < 0)
+            {
+                Console.WriteLine("\n Error1. Input eps is incorrect");
+                return;
+            }
+
+
+
+            n = 0;
+            u1 = a + alpha1 * (b - a);
+            u2 = a = alpha1 * (b - a);
+            do
+            {
+                n++;
+                j1 = func(u1);
+                j2 = func(u2);
+
+                if (j1 < j2)
+                {
+                    b = u2;
+                    u2 = u1;
+                    j2 = j1;
+                    u1 = a + alpha1 * (b - a);
+                    j1 = func(u1);
+                }
+                else
+                if (j1 > j2)
+                {
+                    a = u1;
+                    u1 = u2;
+                    j1 = j2;
+                    u2 = a + alpha * (b - a);
+                    j2 = func(u2);
+                }
+                else
+                if (j1 == j2)
+                {
+                    b = u2;
+                    a = u1;
+                    u1 = a + alpha1 * (b - a);
+                    u2 = a + alpha * (b - a);
+                    j1 = func(u1);
+                    j2 = func(u2);
+                }
+
+            } while (Math.Abs(b - a) >= eps);
+
+            uRes = (b + a) / 2;
+            jRes = func(uRes);
         }
 
     }

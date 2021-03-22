@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LIV06\\Desktop\\MO LAB_1\\MO LAB_1.csproj": {}
+    "C:\\Users\\Игорь Лукин\\Documents\\GitHub\\Methods-of-optimiazation\\MO LAB_1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LIV06\\Desktop\\MO LAB_1\\MO LAB_1.csproj": {
+    "C:\\Users\\Игорь Лукин\\Documents\\GitHub\\Methods-of-optimiazation\\MO LAB_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LIV06\\Desktop\\MO LAB_1\\MO LAB_1.csproj",
+        "projectUniqueName": "C:\\Users\\Игорь Лукин\\Documents\\GitHub\\Methods-of-optimiazation\\MO LAB_1.csproj",
         "projectName": "MO LAB_1",
-        "projectPath": "C:\\Users\\LIV06\\Desktop\\MO LAB_1\\MO LAB_1.csproj",
-        "packagesPath": "C:\\Users\\LIV06\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LIV06\\Desktop\\MO LAB_1\\obj\\",
+        "projectPath": "C:\\Users\\Игорь Лукин\\Documents\\GitHub\\Methods-of-optimiazation\\MO LAB_1.csproj",
+        "packagesPath": "C:\\Users\\Игорь Лукин\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Игорь Лукин\\Documents\\GitHub\\Methods-of-optimiazation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LIV06\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Игорь Лукин\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
