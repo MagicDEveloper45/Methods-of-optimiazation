@@ -24,7 +24,7 @@ namespace MO_LAB_1
             while (this.beta > 1)
             {
                 this.beta /= 2;
-            }              
+            }             
                  
         }
 
