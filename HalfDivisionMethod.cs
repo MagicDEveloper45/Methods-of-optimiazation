@@ -8,7 +8,7 @@ namespace MO_LAB_1
     {
         private double u1, u2, j1, j2, uRes;
         public double jRes;
-        public int n;
+        public int counter;
         private double a;
         private double b;
         private double eps;
@@ -21,16 +21,17 @@ namespace MO_LAB_1
             this.beta = beta;
             this.eps = eps;           
 
-            while (this.beta > 1)
+            while (this.beta >= 0.01)
             {
                 this.beta /= 2;
             }             
                  
         }
 
-        double func(double x )
+        double func(double x)
         {
             return (3 * Math.Cos(2 * x + 4));
+            //return Math.Pow(x, 3) - Math.Pow(x, 2);
         }
 
         public void method()
@@ -53,10 +54,10 @@ namespace MO_LAB_1
                 return;
             }
 
-            n = 0;
+            counter = 0;
             do 
-            {
-                n++;
+            {                
+                counter++;
                 u1 = (b + a - beta) / 2;
                 u2 = (b + a + beta) / 2;
 
@@ -64,14 +65,17 @@ namespace MO_LAB_1
                 j2 = func(u2);
 
                 if (j1 < j2) b = u2;
-                if (j1 > j2) a = u1;
-                if (j1 == j2) b = u2;
+                else if (j1 > j2) a = u1;
+                else if (j1 == j2)
+                {
+                    b = u2;
+                    a = u1;
+                }
 
             } while (Math.Abs(b - a) >= eps);
 
             uRes = (b + a) / 2;
-            jRes = func(uRes);
-
+            jRes = Math.Abs(func(uRes));
         }
     }
 }

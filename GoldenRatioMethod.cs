@@ -8,7 +8,7 @@ namespace MO_LAB_1
     {        
         private double u1, u2, j1, j2, uRes;
         public double jRes;
-        public int n;
+        public int counter;
         private double a;
         private double b;
         private double eps;      
@@ -45,12 +45,12 @@ namespace MO_LAB_1
 
 
 
-            n = 0;
+            counter = 0;
             u1 = a + alpha1 * (b - a);
             u2 = a = alpha1 * (b - a);
             do
             {
-                n++;
+                counter++;
                 j1 = func(u1);
                 j2 = func(u2);
 
@@ -85,7 +85,7 @@ namespace MO_LAB_1
             } while (Math.Abs(b - a) >= eps);
 
             uRes = (b + a) / 2;
-            jRes = func(uRes);
+            jRes = Math.Abs(func(uRes));
         }
 
     }
