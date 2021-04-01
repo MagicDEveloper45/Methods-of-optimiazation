@@ -134,7 +134,7 @@ namespace MO_LAB_1
                     NewtonMethod newtonMethod = new NewtonMethod(a, b, e);
                     newtonMethod.method();
 
-                    Console.WriteLine("\n For function 3 * cos(2x + 4)");
+                    Console.WriteLine("\n For function [3 * cos(2x+4)]^5");
 
                     Console.WriteLine(" \n" + "  HalfDivisionMethod" +
                        $"         J* = {halfDivisionMethod.jRes}" + " \n " +

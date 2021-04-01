@@ -30,9 +30,10 @@ namespace MO_LAB_1
 
         double func(double x)
         {
-            return (3 * Math.Cos(2 * x + 4));
-            //return Math.Pow(x, 3) - Math.Pow(x, 2);
+            //return 15 * Math.Pow(x, 4) - Math.Pow(x, 3);
+             return Math.Pow((3 * Math.Cos(2 * x + 4)),5);
         }
+           
 
         public void method()
         {

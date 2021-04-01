@@ -24,17 +24,20 @@ namespace MO_LAB_1
 
         private double func(double x)
         {
-            return 3 * Math.Cos(2 * x + 4);
+            return Math.Pow((3 * Math.Cos(2 * x + 4)), 5);
+            //return 3 * Math.Cos(2 * x + 4);
         }
 
         private double func1(double x)
         {
-            return -6 * Math.Sin(2 * x + 4);
+            return -2430 * Math.Sin(2 * x + 4) * Math.Pow(Math.Cos(2 * x + 4), 4);
+            //return -6 * Math.Sin(2 * x + 4);
         }
 
         private double func2(double x)
         {
-            return -12 * Math.Cos(2 * x + 4);
+            return 4860 * ((4 * Math.Pow(Math.Sin(2 * x + 4), 2) - Math.Pow(Math.Cos(2 * x + 4), 2)) * Math.Pow(Math.Cos(2*x+4),3));
+            //return -12 * Math.Cos(2 * x + 4);
         }
 
         public void method()
