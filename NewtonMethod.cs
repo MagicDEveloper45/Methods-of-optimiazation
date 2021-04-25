@@ -6,38 +6,34 @@ namespace MO_LAB_1
 {
     class NewtonMethod
     {
-        private double a, b, uk, ukPlus1, j1, j2;
+        private double u, uk;
         public double uRes,jRes;
         private double eps;
-        public int counter = 0;
+        public int counter;
 
-        private readonly double alpha = (Math.Sqrt(5) - 1) / 2; // 0.6180339887498949
-        private readonly double alpha1 = (3 - Math.Sqrt(5)) / 2; // 0.3819660112501051
+        //private readonly double alpha = (Math.Sqrt(5) - 1) / 2; // 0.6180339887498949
+        //private readonly double alpha1 = (3 - Math.Sqrt(5)) / 2; // 0.3819660112501051
 
 
-        public NewtonMethod(double a, double b, double eps )
+        public NewtonMethod(double u0, double eps )
         {
-            this.a = a;
-            this.b = b;
+            u = u0;
             this.eps = eps;
         }
 
         private double func(double x)
         {
-            return Math.Pow((3 * Math.Cos(2 * x + 4)), 5);
-            //return 3 * Math.Cos(2 * x + 4);
+             return Math.Pow(x, 5) - 3 * Math.Pow(x, 3) - 2 * Math.Pow(x, 2) + 4 * x;           
         }
 
         private double func1(double x)
         {
-            return -2430 * Math.Sin(2 * x + 4) * Math.Pow(Math.Cos(2 * x + 4), 4);
-            //return -6 * Math.Sin(2 * x + 4);
+            return 5 * Math.Pow(x, 4) - 9 * Math.Pow(x, 2) - 4 * x + 4;            
         }
 
         private double func2(double x)
         {
-            return 4860 * ((4 * Math.Pow(Math.Sin(2 * x + 4), 2) - Math.Pow(Math.Cos(2 * x + 4), 2)) * Math.Pow(Math.Cos(2*x+4),3));
-            //return -12 * Math.Cos(2 * x + 4);
+             return 20 * Math.Pow(x, 3) - 18 * x - 4;            
         }
 
         public void method()
@@ -46,13 +42,18 @@ namespace MO_LAB_1
             {
                 Console.WriteLine("\n Error1. Input eps is incorrect");
                 return;
+            }          
+
+            counter = 0;
+            uk = func1(u);
+            while (Math.Abs(uk) >= eps)
+            {
+                counter++;
+                u = u - uk / func2(u);
+                uk = func1(u);
             }
 
-            counter = 0;
-
-
-            counter = 0;
-            double u1 = a + alpha1 * (b - a);
+            /*double u1 = a + alpha1 * (b - a);
             double u2 = a = alpha1 * (b - a);
             do
             {
@@ -90,21 +91,18 @@ namespace MO_LAB_1
 
             } while (Math.Abs(b - a) >= eps);
 
-            uRes = (b + a) / 2;            
+            uRes = (b + a) / 2;
 
-            while (Math.Abs(func1(uk)) > eps)            
+            while (Math.Abs(func1(uk)) > eps)
             {
                 ukPlus1 = uk - (func1(uRes) / func2(uRes));
                 counter++;
                 uk = ukPlus1;
-            }
+            }*/
 
             uRes = uk;
-            jRes = Math.Abs(func(uRes));         
+            jRes = Math.Abs(func(uRes));        
 
         }
-
-
-
     }
 }

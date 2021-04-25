@@ -67,16 +67,19 @@ namespace MO_LAB_1
                 case 3:
                     Console.WriteLine("         The parabola Method  ");
 
-                    Console.Write("         Enter a: ");
-                    a = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("         Enter u1: ");
+                    double u1 = Convert.ToDouble(Console.ReadLine());
 
-                    Console.Write("         Enter b: ");
-                    b = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("         Enter u2: ");
+                    double u2 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.Write("         Enter u3: ");
+                    double u3 = Convert.ToDouble(Console.ReadLine());
 
                     Console.Write("         Enter e: ");
                     e = double.Parse(Console.ReadLine());
 
-                    ParabolaMethod problem_3 = new ParabolaMethod(a, b, e);
+                    ParabolaMethod problem_3 = new ParabolaMethod(u1, u2, u3, e);
                     problem_3.method();
 
                     Console.WriteLine(" \n" +
@@ -88,16 +91,13 @@ namespace MO_LAB_1
                 case 4:
                     Console.WriteLine("         The Newton's method  ");
 
-                    Console.Write("         Enter a: ");
-                    a = Convert.ToDouble(Console.ReadLine());
-
-                    Console.Write("         Enter b: ");
-                    b = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("         Enter u0: ");
+                    double u0 = Convert.ToDouble(Console.ReadLine());                   
 
                     Console.Write("         Enter e: ");
                     e = double.Parse(Console.ReadLine());
 
-                    NewtonMethod problem_4 = new NewtonMethod(a, b, e);
+                    NewtonMethod problem_4 = new NewtonMethod(u0, e);
                     problem_4.method();
 
                     Console.WriteLine(" \n" +
@@ -122,26 +122,36 @@ namespace MO_LAB_1
                     Console.Write("         Enter beta (for half-division method): ");
                     beta = double.Parse(Console.ReadLine());
 
+                    Console.Write("         Enter u0: ");
+                    u0 = double.Parse(Console.ReadLine());
+
+                    Console.Write("         Enter u1: ");
+                    u1 = double.Parse(Console.ReadLine());
+
+                    Console.Write("         Enter u2: ");
+                    u2 = double.Parse(Console.ReadLine());
+
+                    Console.Write("         Enter u3: ");
+                    u3 = double.Parse(Console.ReadLine());
+
                     HalfDivisionMethod halfDivisionMethod = new HalfDivisionMethod(a, b, beta, e);
                     halfDivisionMethod.method();
 
                     GoldenRatioMethod goldenRatioMethod = new GoldenRatioMethod(a, b, e);
                     goldenRatioMethod.method();
 
-                    ParabolaMethod parabolaMethod = new ParabolaMethod(a, b, e);
+                    ParabolaMethod parabolaMethod = new ParabolaMethod(u1, u2, u3, e);
                     parabolaMethod.method();
 
-                    NewtonMethod newtonMethod = new NewtonMethod(a, b, e);
-                    newtonMethod.method();
-
-                    Console.WriteLine("\n For function [3 * cos(2x+4)]^5");
+                    NewtonMethod newtonMethod = new NewtonMethod(u0, e);
+                    newtonMethod.method();                    
 
                     Console.WriteLine(" \n" + "  HalfDivisionMethod" +
                        $"         J* = {halfDivisionMethod.jRes}" + " \n " +
                        $"        Counter of iterations = {halfDivisionMethod.counter}"
                        );
 
-                    Console.WriteLine(" \n" + "  ParabolaMethod" +
+                    Console.WriteLine(" \n" + "  ParabolaMethod" + 
                       $"         J* = {parabolaMethod.jRes}" + " \n " +
                       $"        Counter of iterations = {parabolaMethod.counter}"
                       );
@@ -155,10 +165,7 @@ namespace MO_LAB_1
                      $"         J* = {newtonMethod.jRes}" + " \n " +
                      $"        Counter of iterations = {newtonMethod.counter}"
                      );
-                    break;
-
-
-                    break;
+                    break;                 
 
                 default:                
                     break;

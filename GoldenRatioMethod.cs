@@ -25,8 +25,7 @@ namespace MO_LAB_1
 
         double func(double x)
         {
-            return Math.Pow((3 * Math.Cos(2 * x + 4)), 5);
-            // return Math.Pow(x, 3) + 8 * Math.Pow(x, 2) - 3 * x + 3;
+           return Math.Pow(x, 5) - 3 * Math.Pow(x, 3) - 2 * Math.Pow(x, 2) + 4 * x;
         }
 
         public void method()
@@ -42,8 +41,6 @@ namespace MO_LAB_1
                 Console.WriteLine("\n Error1. Input eps is incorrect");
                 return;
             }
-
-
 
             counter = 0;
             u1 = a + alpha1 * (b - a);
